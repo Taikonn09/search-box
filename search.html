@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #B33771;
+            min-height: 100vh; 
+        }
+        .search__box{
+            background: lightgray;
+            border: 3px solid lightgray;
+            border-radius: 30px;
+            
+        }
+        .search__text{
+            background: lightgray;
+            border: none;
+            outline: none;
+            background: none;
+            width: 0;
+            font-size: 18px;
+            padding: 0;
+            transition: all 0.50s ease-in-out;
+            color: black;
+            font-size: 20px;
+        }
+        .search__box:hover .search__text , .search__box .search__text:valid{   /* điều kiện để thực thi khi có dữ liệu thì không đóng input */
+            width: 300px;
+            padding: 10px 0px 10px 15px;
+        }
+        .search__btn{
+            background-color: #fff;
+            border: none;
+            padding: 15px 15px;
+            cursor: pointer;              /*hiện con trỏ khi người dùng hover */ 
+            border-radius: 50%;
+            font-size: 18px;
+            background: lightgray;
+        }
+    </style>
+    <div class="main__search">
+        <form action="" class="search__box">
+        <input type="text" class="search__text" placeholder="Nhập nội dung cần tìm..." required>   <!-- khi sử dụng required, có lữ liệu thì sẽ không thu nhỏ input -->
+            <button class="search__btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html> 
